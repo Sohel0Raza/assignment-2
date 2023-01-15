@@ -109,10 +109,10 @@ nav li a {
     height: 100%;
 }
 
-/*---------------------
+/*------------------------
     main section style  
 ------------------------*/
-/*-----------------------------
+/*--------------------------------
     feature section style start
 --------------------------------*/
 .container {
@@ -170,7 +170,9 @@ nav li a {
     feature section style end  
 ---------------------------------*/
 
-/* features-list style start */
+/*-------------------------------
+    features-list style start
+--------------------------------- */
 .features-list {
     display: flex;
     width: 100%;
@@ -221,8 +223,7 @@ nav li a {
     width: 514px;
     height: 78px;
     padding: 0 30px 30px;
-    overflow: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
     text-overflow: ellipsis;
 }
 
@@ -239,7 +240,7 @@ nav li a {
     position: relative;
     top: -100px;
     left: -50px;
-    padding: 40px 30px;
+    padding: 35px 25px;
     background-color: #FF900E;
     border: none;
     border-radius: 8px;
@@ -247,72 +248,357 @@ nav li a {
     font-weight: 500;
     font-size: 25px;
 }
-.last-button span{
+
+.last-button span {
     font-weight: 700;
     font-size: 65px;
 }
-/* features-list style end  */
 
-/* facts style start  */
+/*----------------------------
+    features-list style end  
+-----------------------------*/
+
+/*---------------------
+    facts style start 
+------------------------ */
 .fact-title {
     padding: 50px;
 }
-.fact-title h2{
+
+.fact-title h2 {
     font-weight: 700;
     font-size: 45px;
     color: #131313;
 }
-.fact{
-    display:flex;
+
+.fact {
+    display: flex;
     justify-content: space-around;
     margin-bottom: 150px;
 }
-.fact-info{
+
+.fact-info {
     width: 220px;
     height: 200px;
     text-align: center;
     padding: 40px;
     border: 1px solid #FF900E;
     border-radius: 8px;
-    transition: width 0.5s , hight 0.5s;
+    transition: width 0.5s, hight 0.5s;
 }
-.fact-info:hover{
+
+.fact-info:hover {
     width: 240px;
     height: 220px;
-    background-color:#b2ddf3;
-    transform:skew(10deg) ;
+    background-color: #b2ddf3;
+    transform: skew(10deg);
 }
-.fact-info image{
+
+.fact-info image {
     width: 100%;
     text-align: center;
 }
-.fact-info h3{
+
+.fact-info h3 {
     font-weight: 600;
     font-size: 45px;
     color: #424242;
 }
 
-/* sponsorse style  */
-.sponsors{
+/*---------------------
+    sponsorse style
+---------------------*/
+.sponsors {
     text-align: center;
 }
-.sponsors h3{
+
+.sponsors h3 {
     padding: 10px;
     font-weight: 700;
     font-size: 45px;
     color: #131313;
 }
-.sponsors-photos{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    margin: 50px 0 130px;
+
+.sponsors-photos {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0 70px;
 }
 
-/* footer style  */
-.footer{
+.sponsors-photos img {
+    width: 160px;
+}
+
+/*-----------------
+    contacts style  
+-------------------*/
+.contact {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.contact-title {
+    margin-bottom: 50px;
+}
+
+.contact i {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+/*-------------------
+    footer style  
+----------------------*/
+.footer {
     height: 100px;
     text-align: center;
     border-radius: 10px;
+    margin-top: 50px;
     background: rgba(255, 144, 14, 0.1);
     padding: 38px 0;
+}
+
+/*---------------------------------
+    media query style for mobile 
+--------------------------------*/
+@media only screen and (max-width:768px) {
+    .header {
+        height: 1000px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav,
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 40px;
+    }
+
+    nav li {
+        padding: 7px;
+        margin-left: 0;
+    }
+
+    .nav-title {
+        margin-top: 0;
+        font-weight: 700;
+        font-size: 20px;
+        position: absolute;
+        top: 10px;
+        left: 30px;
+    }
+
+    
+    .header-info {
+        margin: 10px auto;
+        width: 50%;
+        text-align: center;
+    }
+
+    .header-title {
+        margin: 25px 0 0 12px;
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .header-info p {
+        margin-bottom: 10px;
+        padding: 5px;
+        line-height: 20px;
+    }
+    .header-banner {
+        margin: 0 auto;
+        width: 80%;
+        height: 350px;
+    }
+
+    .header-banner img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*------------------------
+        main section style  
+    ------------------------*/
+    /*--------------------------------
+        feature section style start
+    --------------------------------*/
+    .container {
+        width: 90%;
+        margin:0 auto;
+
+    }
+
+    .features {
+        width: 100%;
+        margin: 0;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .feature-photos {
+        width: 80%;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .feature-photos img {
+        width: 100%;
+    }
+
+    .feature-details {
+        width: 100%;
+    }
+
+    .feature-info {
+        margin:0 0 20px 0;
+    }
+
+    .feature-info h2 {
+        padding: 10px;
+    }
+    .feature-info p {
+        padding: 10px;
+    }
+
+    .feature-info button {
+        margin-left: 10px;
+    }
+
+    /*--------------------------------
+        feature section style end  
+    ---------------------------------*/
+
+    /*-------------------------------
+        features-list style start
+    --------------------------------- */
+    .features-list {
+        flex-direction: column;
+        width: 100%;
+        height: 1100px;
+    }
+
+    .list {
+        width: 100%;
+    }
+
+    .list-title {
+        margin-right: 0;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .list-title h2 {
+        padding: 0 10px;
+        margin-bottom: 15px;
+    }
+
+    .list p {
+        margin-bottom: 10px;
+        padding-right: 20px;
+    }
+
+    .list-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .list-item h3 {
+        padding: 15px 20px 5px 15px;
+        font-size: 15px;
+    }
+
+    .list-item p {
+        width: 100%;
+        height: 70px;
+        padding: 0 15px 15px;
+        line-height: 18px;
+    }
+    .list-photo {
+        width: 100%;
+    }
+
+    .features-list img {
+        width: 100%;
+        height: 420px;
+    }
+
+    .last-button {
+        left: 0;
+        padding: 15px 10px;
+        font-size: 15px;
+    }
+
+    .last-button span {
+        font-size: 25px;
+    }
+
+    /*----------------------------
+        features-list style end  
+    -----------------------------*/
+
+    /*---------------------
+        facts style start 
+    ------------------------ */
+    .fact-title {
+        padding: 20px;
+    }
+    .fact {
+        flex-direction: column;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    .fact-info {
+        width: 300px;
+        height: 270px;
+        margin-bottom: 20px;
+    }
+
+    /*---------------------
+        sponsorse style
+    ---------------------*/
+
+    .sponsors h3 {
+        padding: 5px;
+    }
+
+    .sponsors-photos {
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+        margin: 20px 0 30px;
+    }
+
+    .sponsors-photos img {
+        margin: auto;
+        width: 120px;
+        padding: 5px 0;
+    }
+
+    /*-----------------
+        contacts style  
+    -------------------*/
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-title {
+        margin-bottom: 10px;
+    }
+
+    .contact i {
+        margin-bottom: 10px;
+    }
+
+    /*-------------------
+        footer style  
+    ----------------------*/
+    .footer {
+      margin-top: 20px;
+    }
 }
